@@ -430,7 +430,6 @@ public class ToolBarOption implements View.OnClickListener, OnObjectListener {
         int r= Integer.parseInt(ssplit[0].trim());
         int g= Integer.parseInt(ssplit[1].trim());
         int b= Integer.parseInt(ssplit[2].trim());
-        Log.e("========", "rgb2ColorInt: "+r+","+g+","+b+"," );
         return Color.rgb(r,g,b);
     }
     /**
@@ -439,7 +438,7 @@ public class ToolBarOption implements View.OnClickListener, OnObjectListener {
     private void pupMenu() {
         if (mBoardObject.getType() == WilddogBoardObject.BoardObjectType.OBJECTTEXT) {
             mActionsMenu.expandText();
-        } else {
+        } else if(mBoardObject.getType()!=WilddogBoardObject.BoardObjectType.OBJECTIMAGE){
             mActionsMenu.expandDot();
         }
         mActionsMenu.clearAllControllSelectedState();
