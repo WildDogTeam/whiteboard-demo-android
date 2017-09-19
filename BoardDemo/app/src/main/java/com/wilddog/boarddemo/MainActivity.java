@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         boardView = (WilddogBoard) findViewById(R.id.board);
-        boardView.setup("ts","canvasPath","abc");
+        boardView.setup("野狗appID","数据储存路径","用户ID");//数据储存路径：可以用户自定义；用户ID：用户自己定义
 
         actionsMenu = (ToolBarMenu) findViewById(R.id.graphic_menu);
         actionsMenu.bindingBoard(boardView,this);
