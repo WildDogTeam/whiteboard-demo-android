@@ -9,9 +9,13 @@ import com.wilddog.toolbar.util.QIniuUtil;
  */
 
 public class App extends Application {
+    private static final String token = "";
+
+    private static final String url = "";
+
     @Override
     public void onCreate() {
         super.onCreate();
-        QIniuUtil.getInstance().init();
+        QIniuUtil.getInstance().init(token,url);
     }
 }

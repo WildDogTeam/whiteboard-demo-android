@@ -1,5 +1,37 @@
 # 白板demo说明
 
+## 添加权限
+
+```xml
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+```
+## 引入toolbar工具栏 
+
+demo提供默认工具栏，可在build文件中直接引入toobar类库：
+```java
+compile project(':toolbar')
+```
+
+## 七牛云存储
+
+toolbar中引入七牛云存储存放图片文件：
+```java
+compile 'com.qiniu:qiniu-android-sdk:7.3.+'
+```
+使用过程中需要初始化七牛token和外链url，关于token和url的获取具体操作参考七牛官网。
+```java
+ QIniuUtil.getInstance().init(token,url);
+```
+
+
+
 ## 白板使用
 
 ### xml使用部分
@@ -42,4 +74,4 @@
     actionsMenu.bindingBoard(boardView,this);
 ```
 
-
+## 
